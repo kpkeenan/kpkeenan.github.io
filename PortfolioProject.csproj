@@ -71,8 +71,8 @@
     <Content Include="index.html" />
     <Content Include="js\custom.js" />
     <Content Include="js\Frameworks\angular.min..js" />
+    <Content Include="js\Frameworks\highcharts.js" />
     <Content Include="js\Frameworks\holder.js" />
-    <Content Include="js\main.js" />
     <Content Include="js\plugins.js" />
     <Content Include="js\Frameworks\bootstrap.js" />
     <Content Include="js\Frameworks\jquery-2.1.3.js" />
