@@ -1,0 +1,6 @@
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\bin\HTML5 Boiler Plate v4.3.dll.config
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\bin\HTML5 Boiler Plate v4.3.dll
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\bin\HTML5 Boiler Plate v4.3.pdb
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\obj\Debug\HTML5 Boiler Plate v4.3.dll
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\obj\Debug\HTML5 Boiler Plate v4.3.pdb
+C:\Workspace\kpkeenan.github.io\Portfolio\PortfolioProject\PortfolioProject\obj\Debug\PortfolioProject.csprojResolveAssemblyReference.cache
