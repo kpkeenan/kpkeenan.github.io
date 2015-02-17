@@ -5,6 +5,7 @@ $(document).ready(function () {
 
     $('#demo').on('click', function () {
         demoChart();
+        demoCircle();
     })
 
     function demoChart() {
@@ -22,11 +23,40 @@ $(document).ready(function () {
                     fillColor: "blue",
                     data: [92, 80, 20]
                 }]
-            }
+            };
         myGraph.destroy();
         myGraph = new Chart(document.getElementById("demoChart").getContext("2d")).Bar(demoData, {});
+
         generateLegend(demoData);
     }
+
+    function demoCircle() {
+        var myGraph = new Chart(document.getElementById("demoCircle").getContext("2d")).Line({}, {}),
+            ctx = document.getElementById("demoCircle").getContext("2d"),
+            demoCircle = [
+                {
+                    value: 250,
+                    color: "#F7464A",
+                    highlight: "#FF5A5E",
+                    label: "Outgoing Call"
+                },
+    {
+        value: 80,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Incoming Call"
+    },
+    {
+        value: 20,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Face To Face"
+    },
+            ]
+        myGraph.destroy();
+        myGraph = new Chart(document.getElementById("demoCircle").getContext("2d")).Pie(demoCircle, {});
+    }
+
     function generateLegend(graph) {
        
             var legend = '',
