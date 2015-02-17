@@ -1,0 +1,171 @@
+﻿@page{
+    margin: 0.25in 0.5in 2.25in 0.5in;
+}
+
+@media print{
+    #relaunch {
+        display:none !important;
+    }
+}
+
+/* re-writing bootstrap rules */
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 8px; 
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: none;
+}
+
+
+.undo{
+  color: red;
+}
+
+.table > thead > tr > th {
+    border-bottom: 2px solid #000;
+}
+
+.table{
+    margin-bottom:0px;
+}
+
+.fixTable{
+    float:left;
+    width: 100%;
+    font-size:18px;
+}
+
+.thHeader {
+    text-align: center;
+    display: block;
+    width: 55%;
+    float: left;
+}
+
+.table{
+    border-color: none;
+}
+
+#tableBody>tr>td{
+    text-align: center;
+    display: block;
+    width: 55%;
+    height: 30px;
+    float: left;
+}
+
+#tableBody > tr td:first-child {
+    width: 15%;
+}
+
+#tableBody > tr td:last-child {
+    width: 30%;
+}
+
+.table > thead > tr th:first-child {
+    width: 15%;
+}
+
+.table > thead > tr th:last-child {
+    width: 30%;
+}
+
+#mainTable{
+    border: 2px solid #000;
+    border-bottom: none;
+}
+.success{
+    color:green;
+}
+
+.error{
+    color:red;
+}
+table tr td { 
+    padding: 2px 3px 2px 3px; 
+    vertical-align: top; 
+    border-collapse: collapse; 
+    border-spacing: 0px; 
+    border: none; 
+}
+
+.timeStamp{
+    border-left: 1px solid #000;
+}
+
+.dotted{
+    border-left: 1px dotted #000;
+}
+
+.strictRightDotted{
+ border-right: 1px dotted #000;
+}
+
+.timeTable{
+    border: 2px solid #000;
+    border-top: none;
+}
+
+#todaysDate{
+    font-size:25px;
+    text-align:center;
+    color:white;
+    background-color:#DDD;
+    height:40px;
+}
+
+.selected{
+    color:#000;
+    background-color:#DDD;
+    text-align:center;
+}
+
+.alertnatingRows{
+    background-color: #EEE; /*  */                                                   /* HEADER COLORS */
+}
+
+.center{
+    text-align:center;
+}
+
+
+.rowHeaders{
+    text-align:center;
+}
+
+.rowHeaders>th{
+    display: table-row;
+    width: 100%;
+}
+
+#mainTable>thead>tr{
+    width: 100%;
+    background-color:#00F;
+}
+
+#mainTable>thead>tr>th{
+    width: 100%;
+    background-color:#808080;                                                  /* HEADER COLORS */
+    border-bottom-color:#808080;
+}
+
+.bottomBorder{
+    border-bottom: 1px solid #000;
+}
+
+.table > tbody > tr > td.topBorders.topBorders{
+    border-top: 1px solid #000;
+}
+
+.table > tbody > tr > td.firstborder{
+    border-top: 1px solid #B8B8B8;
+}
+
+dt{
+    margin-bottom: 20px;
+}
