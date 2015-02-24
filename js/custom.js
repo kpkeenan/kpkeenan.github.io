@@ -1,8 +1,6 @@
 ﻿
 $(document).ready(function () {
 
-
-
     $('#demo').on('click', function () {
         demoChart();
         demoCircle();
@@ -33,26 +31,27 @@ $(document).ready(function () {
     function demoCircle() {
         var myGraph = new Chart(document.getElementById("demoCircle").getContext("2d")).Line({}, {}),
             ctx = document.getElementById("demoCircle").getContext("2d"),
-            demoCircle = [
+            demoCircle =
+            [
                 {
                     value: 250,
                     color: "#F7464A",
                     highlight: "#FF5A5E",
                     label: "Outgoing Call"
                 },
-    {
-        value: 80,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Incoming Call"
-    },
-    {
-        value: 20,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Face To Face"
-    },
-            ]
+                {
+                    value: 80,
+                    color: "#46BFBD",
+                    highlight: "#5AD3D1",
+                    label: "Incoming Call"
+                },
+                {
+                    value: 20,
+                    color: "#FDB45C",
+                    highlight: "#FFC870",
+                    label: "Face To Face"
+                },
+              ]
         myGraph.destroy();
         myGraph = new Chart(document.getElementById("demoCircle").getContext("2d")).Pie(demoCircle, {});
     }
@@ -68,7 +67,6 @@ $(document).ready(function () {
                 legend += '<li class=graph-legend><span id="' + datasets[i].label.replace(/ /g, "-") + '" class="' + graphClass + '" style="background: '
                    + graph.datasets[i].fillColor + ';" ></span>   ' + datasets[i].label + '  <i class="graph-legend fa fa-pie-chart fa-spin"></i></li>';
             }
-
             $('#legend').html(legend);
         }
 });
