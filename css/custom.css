@@ -169,3 +169,7 @@ table tr td {
 dt{
     margin-bottom: 20px;
 }
+
+.contact-info{
+    align-content:center;
+}

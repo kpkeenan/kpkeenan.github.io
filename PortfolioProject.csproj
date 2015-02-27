@@ -74,14 +74,17 @@
     <Content Include="images\bundle.png" />
     <Content Include="images\calendar.png" />
     <Content Include="images\dashboard.png" />
+    <Content Include="images\fa.png" />
     <Content Include="images\form.png" />
     <Content Include="images\MVC.png" />
+    <Content Include="images\phonelogo.png" />
     <Content Include="images\profilePic.png" />
     <Content Include="images\scheduler.png" />
     <Content Include="images\schedulerFilled.png" />
     <Content Include="images\sql.png" />
     <Content Include="images\superBundle.png" />
     <Content Include="images\TAGWORKS LOGO.png" />
+    <Content Include="images\utep-image.png" />
     <Content Include="images\vs.png" />
     <Content Include="index.html" />
     <Content Include="js\bootstrap.min.js" />
@@ -91,6 +94,7 @@
     <Content Include="js\contact_me.js" />
     <Content Include="js\custom.js" />
     <Content Include="js\freelancer.js" />
+    <Content Include="js\highcharts.js" />
     <Content Include="js\jqBootstrapValidation.js" />
     <Content Include="js\jquery.js" />
     <Content Include="robots.txt" />
