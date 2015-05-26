@@ -1,15 +1,36 @@
 ﻿
 $(document).ready(function () {
-
+    var oldData = [
+                    ['Javascript', 13],
+                    ['CSS', 13],
+                    ['HTML', 13],
+                    ['AngularJS', 4],
+                    ['jQuery', 13],
+                    ['Java', 18],
+                    ['C', 5],
+                    ['C#', 4],
+                    ['SQL', 6],
+                    ['Zurb Foundation Framework', 12],
+                    ['Bootstrap Framework', 6],
+                    ['chartsJS', 8],
+                    ['Visual Studio (Software)', 13]
+    ],
+        oldMonth = $('#oldMonth').val(),
+        currentMonth = new Date().getMonth() + 1;
+   
     $(function () {
-        highchart();
+        highchart(oldData);
         buildTable();
+        updateXP();
+        bindButtons();
     })
 
-    $('#demo').on('click', function () {
-        demoChart();
-        demoCircle();
-    })
+    function bindButtons() {
+        $('#demo').on('click', function () {
+            demoChart();
+            demoCircle();
+        })
+    }
 
     function demoChart() {
         var myGraph = new Chart(document.getElementById("demoChart").getContext("2d")).Line({}, {}),
@@ -75,13 +96,13 @@ $(document).ready(function () {
             $('#legend').html(legend);
     }
 
-    function highchart() {
-        $('#container').highcharts({
+    function highchart(arrayData) {
+        var data = {
             chart: {
                 type: 'column'
             },
             title: {
-                text: 'Skills/Frameworks'
+                text: ''
             },
             xAxis: {
                 type: 'category',
@@ -96,7 +117,7 @@ $(document).ready(function () {
             yAxis: {
                 min: 0,
                 title: {
-                    text: 'Skills/Framework experience'
+                    text: 'Time in Months'
                 }
             },
             legend: {
@@ -107,23 +128,9 @@ $(document).ready(function () {
             },
             series: [{
                 name: 'Experience',
-                data: [
-                    ['Javascript',11 ],
-                    ['CSS', 11],
-                    ['HTML', 11],
-                    ['AngularJS', 4],
-                    ['jQuery', 11],
-                    ['Java', 18],
-                    ['C', 1],
-                    ['C#', 2],
-                    ['SQL', 4],
-                    ['Zurb Foundation Framework', 5],
-                    ['Bootstrap Framework', 4],
-                    ['chartsJS', 5],
-                    ['Visual Studio (Software)',11]
-                ],
+                data: arrayData,
                 dataLabels: {
-                    enabled: true,
+                    enabled: false,
                     rotation: -90,
                     color: '#FFFFFF',
                     align: 'right',
@@ -135,17 +142,17 @@ $(document).ready(function () {
                     }
                 }
             }]
-        });
+        }
+        $('#container').highcharts(data);
     }
 
     function buildTable() {
         var headerText = '<tr>',
         headers = ['Job Title', 'Responsibilities', 'Time Worked'],
-        jobs = ['Apartment Assistant', 'Dairy Queen Employee', 'ESTG Work-study'],
+        jobs = ['ESTG Programmer', 'TagWorks Freelance Developer'],
         responsibilities =
-        ["Assisted in maintaining apartments. (Cleaning, painting, helping tenants)", "Washed dishes, assisted customers at the register, made orders.",
-        "Set up, and managed the building's conference rooms. Developed web applications for the Enrollment Services Technology Group. Tested/maintained department websites."],
-        timeWorked = ['7/20/2010-8/31/2010', '6/6/2011- 8/20/2011', '1/30/2012-Present'];
+        ["Developed web applications for the Enrollment Services Technology Group. Tested/maintained/developed department websites. (<a href='http://financialaid.utep.edu/'>Financial Aid</a>)", "Freelance web design"],
+        timeWorked = ['1/30/2012-Present',"9/6/2015-Present"];
         bodyText = '';
 
         for (var i = 0; i < headers.length; i++) {
@@ -158,6 +165,17 @@ $(document).ready(function () {
         }
         $('#tableHeaders').html(headerText);
         $('#tableBody').html(bodyText);
+    }
+
+    function updateXP() {
+        if(oldMonth!=currentMonth){
+            oldMonth = currentMonth;
+            updateData();
+        }
+    }
+
+    function updateData(data) {
+        var skillNames = [];
     }
 
 });
